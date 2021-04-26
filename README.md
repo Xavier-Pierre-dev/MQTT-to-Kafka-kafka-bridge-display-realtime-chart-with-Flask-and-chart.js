@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![Alt text](./Last_Ram_Usage_Value.jpg "Screenshot1")
+![Alt text](./Last_Ram_Usage_Value.JPG "Screenshot1")
+
 <br></br>
 ![Alt text](./KAFKA_Bridge/Kafka_bridge.png "Screenshot")
 Connect Kafka and MQTT — Option 2 (Image by author). Source : https://medium.com/python-point/mqtt-and-kafka-8e470eff606b
