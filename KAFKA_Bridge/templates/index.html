@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h1 align="center">Last ram usage value.</h1>
+    <div class="container" style="height:80%;width:50%;flex:auto;  margin: auto;">
+
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+
+var data_graph = [];
+var labels = [];
+var labels_cut = [];
+var range_index = 200;
+
+var source = new EventSource('/topic/RAM_1'); //ENTER YOUR TOPICNAME HERE
+source.addEventListener('message', function(e){
+
+  console.log('Message');
+   obj = JSON.parse(e.data);
+
+
+    data_graph.push(obj)
+
+    labels.push(data_graph.length)
+
+
+
+
+    updateChartData(myChart, data_graph, 0);
+
+
+
+}, false);
+
+
+
+function updateChartData(chart, data, dataSetIndex){
+    var temp
+    if(data.length>range_index){
+        temp=data.slice(data.length - range_index)
+        labels_cut=labels.slice(labels.length - range_index)
+
+    }
+
+
+    chart.data.datasets[dataSetIndex].data = temp;
+    chart.data.labels = labels_cut;
+    chart.update();
+}
+
+
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+    datasets: [{
+    label: 'RAM %',
+    data: data_graph,
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+</script>
+
+
+</body>
+</html>
