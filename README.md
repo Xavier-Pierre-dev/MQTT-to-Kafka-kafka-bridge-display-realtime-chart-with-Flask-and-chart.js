@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![image](iot.png)
+
 ![Alt text](./Last_Ram_Usage_Value.jpg "Screenshot1")
 <br></br>
 ![Alt text](./KAFKA_Bridge/Kafka_bridge.png "Screenshot")
