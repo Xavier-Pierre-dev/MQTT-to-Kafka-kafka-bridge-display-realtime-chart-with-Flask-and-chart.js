@@ -51,6 +51,10 @@ function updateChartData(chart, data, dataSetIndex){
         labels_cut=labels.slice(labels.length - range_index)
 
     }
+    else{
+    labels_cut=labels;
+    temp=data;
+    }
 
 
     chart.data.datasets[dataSetIndex].data = temp;

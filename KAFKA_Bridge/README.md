@@ -1,9 +1,10 @@
 # 🚀 MQTT to Kafka (kafka bridge) display realtime chart with Flask and chart.js 🚀
 <div align="center">
 
-![Alt text](./../Last_Ram_Usage_Value.jpg "Screenshot")
+![Alt text](./../Last_Ram_Usage_Value.JPG "Screenshot")
+
 <br></br>
-![Alt text](./Kafka_bridge.png "Screenshot")
+![Alt text](./Kafka_bridge.png "Screenshot1")
 Connect Kafka and MQTT — Option 2 (Image by author). Source : https://medium.com/python-point/mqtt-and-kafka-8e470eff606b
 </div>
 

@@ -83,4 +83,3 @@ kafka-server-start.bat ../../config/server.properties
 
 ### Now you can run each 3 python file inside different console
 
-# MQTT-to-Kafka-kafka-bridge-display-realtime-chart-with-Flask-and-chart.js
